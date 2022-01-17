@@ -23,12 +23,16 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptCompany = createDescriptorForCompany();
   /*package*/ final ConceptDescriptor myConceptCountry = createDescriptorForCountry();
   /*package*/ final ConceptDescriptor myConceptCreditSales = createDescriptorForCreditSales();
+  /*package*/ final ConceptDescriptor myConceptCustomDataType = createDescriptorForCustomDataType();
+  /*package*/ final ConceptDescriptor myConceptCustomer = createDescriptorForCustomer();
   /*package*/ final ConceptDescriptor myConceptDiscount = createDescriptorForDiscount();
   /*package*/ final ConceptDescriptor myConceptItem = createDescriptorForItem();
   /*package*/ final ConceptDescriptor myConceptLineItem = createDescriptorForLineItem();
+  /*package*/ final ConceptDescriptor myConceptLocation = createDescriptorForLocation();
   /*package*/ final ConceptDescriptor myConceptStreet = createDescriptorForStreet();
   /*package*/ final ConceptDescriptor myConceptTelephone = createDescriptorForTelephone();
   /*package*/ final ConceptDescriptor myConceptTransaction = createDescriptorForTransaction();
+  /*package*/ final EnumerationDescriptor myEnumerationDataType = new EnumerationDescriptor_DataType();
   /*package*/ final EnumerationDescriptor myEnumerationPaymentMethod = new EnumerationDescriptor_PaymentMethod();
   /*package*/ final EnumerationDescriptor myEnumerationTransactionType = new EnumerationDescriptor_TransactionType();
   private final LanguageConceptSwitch myIndexSwitch;
@@ -45,7 +49,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAdditionalCharge, myConceptAddress, myConceptCashSales, myConceptCity, myConceptCompany, myConceptCountry, myConceptCreditSales, myConceptDiscount, myConceptItem, myConceptLineItem, myConceptStreet, myConceptTelephone, myConceptTransaction);
+    return Arrays.asList(myConceptAdditionalCharge, myConceptAddress, myConceptCashSales, myConceptCity, myConceptCompany, myConceptCountry, myConceptCreditSales, myConceptCustomDataType, myConceptCustomer, myConceptDiscount, myConceptItem, myConceptLineItem, myConceptLocation, myConceptStreet, myConceptTelephone, myConceptTransaction);
   }
 
   @Override
@@ -66,12 +70,18 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptCountry;
       case LanguageConceptSwitch.CreditSales:
         return myConceptCreditSales;
+      case LanguageConceptSwitch.CustomDataType:
+        return myConceptCustomDataType;
+      case LanguageConceptSwitch.Customer:
+        return myConceptCustomer;
       case LanguageConceptSwitch.Discount:
         return myConceptDiscount;
       case LanguageConceptSwitch.Item:
         return myConceptItem;
       case LanguageConceptSwitch.LineItem:
         return myConceptLineItem;
+      case LanguageConceptSwitch.Location:
+        return myConceptLocation;
       case LanguageConceptSwitch.Street:
         return myConceptStreet;
       case LanguageConceptSwitch.Telephone:
@@ -85,7 +95,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<DataTypeDescriptor> getDataTypeDescriptors() {
-    return Arrays.asList(myEnumerationPaymentMethod, myEnumerationTransactionType);
+    return Arrays.asList(myEnumerationDataType, myEnumerationPaymentMethod, myEnumerationTransactionType);
   }
 
   /*package*/ int internalIndex(SAbstractConcept c) {
@@ -136,7 +146,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:1553ae46-2a2d-4948-9a23-2cea3299b2f3(mps.sales.structure)/8414543796762297820");
     b.version(2);
     b.property("codice", 0x74c6770040fd2b69L).type(PrimitiveTypeId.STRING).origin("8414543796762389353").done();
-    b.aggregate("address", 0x74c6770040fbd72bL).target(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fc31a9L).optional(false).ordered(true).multiple(true).origin("8414543796762302251").done();
+    b.aggregate("address", 0x4f1b7084f98bcb4L).target(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fc31a9L).optional(false).ordered(true).multiple(true).origin("356267091862011060").done();
+    b.aggregate("customers", 0x15d7ae914eda31a8L).target(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x4f1b7084f993550L).optional(true).ordered(true).multiple(true).origin("1573918533905691048").done();
     b.aggregate("transactions", 0x74c6770040fc31b2L).target(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fbc5dfL).optional(true).ordered(true).multiple(true).origin("8414543796762325426").done();
     return b.create();
   }
@@ -158,6 +169,26 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.property("type", 0x74c6770040fbc5e4L).type(PrimitiveTypeId.STRING).origin("8414543796762297828").done();
     b.alias("credit sales");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForCustomDataType() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("mps.sales", "CustomDataType", 0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x15d7ae914edeb406L);
+    b.class_(false, false, false);
+    b.origin("r:1553ae46-2a2d-4948-9a23-2cea3299b2f3(mps.sales.structure)/1573918533905986566");
+    b.version(2);
+    b.property("dataType", 0x15d7ae914edeb40fL).type(MetaIdFactory.dataTypeId(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x15d7ae914edeb408L)).origin("1573918533905986575").done();
+    b.property("length", 0x15d7ae914edeb411L).type(PrimitiveTypeId.INTEGER).origin("1573918533905986577").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForCustomer() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("mps.sales", "Customer", 0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x4f1b7084f993550L);
+    b.class_(false, false, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:1553ae46-2a2d-4948-9a23-2cea3299b2f3(mps.sales.structure)/356267091862041936");
+    b.version(2);
+    b.property("uniqueID", 0x15d7ae914edea0aaL).type(PrimitiveTypeId.STRING).origin("1573918533905981610").done();
+    b.property("phoneNumber", 0x4f1b7084f993553L).type(PrimitiveTypeId.STRING).origin("356267091862041939").done();
+    b.alias("customer");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDiscount() {
@@ -189,9 +220,19 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("quantity", 0x74c6770040fc12b6L).type(PrimitiveTypeId.INTEGER).origin("8414543796762317494").done();
     b.property("taxAmount", 0x74c6770040fc12b9L).type(PrimitiveTypeId.INTEGER).origin("8414543796762317497").done();
     b.property("totalAmount", 0x74c6770040fc12bdL).type(PrimitiveTypeId.INTEGER).origin("8414543796762317501").done();
-    b.associate("item", 0x4066338edaebcb38L).target(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fc12a0L).optional(true).origin("4640453154703133496").done();
+    b.aggregate("item", 0x74c6770040fc12b2L).target(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fc12a0L).optional(false).ordered(true).multiple(false).origin("8414543796762317490").done();
     b.aggregate("discount", 0x74c6770040fc319fL).target(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fc319cL).optional(true).ordered(true).multiple(false).origin("8414543796762325407").done();
     b.aggregate("additionalCharge", 0x74c6770040fc31a5L).target(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fc31a2L).optional(true).ordered(true).multiple(false).origin("8414543796762325413").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForLocation() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("mps.sales", "Location", 0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x4f1b7084f992afaL);
+    b.class_(false, false, false);
+    b.origin("r:1553ae46-2a2d-4948-9a23-2cea3299b2f3(mps.sales.structure)/356267091862039290");
+    b.version(2);
+    b.property("latitude", 0x4f1b7084f992afbL).type(PrimitiveTypeId.STRING).origin("356267091862039291").done();
+    b.property("longitude", 0x4f1b7084f992afdL).type(PrimitiveTypeId.STRING).origin("356267091862039293").done();
+    b.alias("location");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForStreet() {
@@ -221,9 +262,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.property("transactionNumber", 0x74c6770040fc2694L).type(PrimitiveTypeId.STRING).origin("8414543796762322580").done();
     b.property("customer", 0x74c6770040fc3177L).type(PrimitiveTypeId.STRING).origin("8414543796762325367").done();
-    b.property("date", 0x74c6770040fc317aL).type(PrimitiveTypeId.STRING).origin("8414543796762325370").done();
+    b.property("date", 0x74c6770040fc317aL).type(MetaIdFactory.dataTypeId(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x15d7ae914edeb408L)).origin("8414543796762325370").done();
     b.property("paymentMethod", 0x74c6770040fc318eL).type(MetaIdFactory.dataTypeId(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fc317fL)).origin("8414543796762325390").done();
     b.property("grandTotal", 0x46012aa9887b152aL).type(PrimitiveTypeId.INTEGER).origin("5044359965259273514").done();
+    b.associate("customer", 0x15d7ae914ee3c873L).target(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x4f1b7084f993550L).optional(true).origin("1573918533906319475").done();
     return b.create();
   }
 }

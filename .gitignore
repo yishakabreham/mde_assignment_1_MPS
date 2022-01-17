@@ -1,0 +1,3 @@
+# Project exclude paths
+/languages/mps.sales/classes_gen/
+/languages/mps.sales/generator/classes_gen/

@@ -16,9 +16,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Company;
   private ConceptPresentation props_Country;
   private ConceptPresentation props_CreditSales;
+  private ConceptPresentation props_CustomDataType;
+  private ConceptPresentation props_Customer;
   private ConceptPresentation props_Discount;
   private ConceptPresentation props_Item;
   private ConceptPresentation props_LineItem;
+  private ConceptPresentation props_Location;
   private ConceptPresentation props_Street;
   private ConceptPresentation props_Telephone;
   private ConceptPresentation props_Transaction;
@@ -76,6 +79,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_CreditSales = cpb.create();
         }
         return props_CreditSales;
+      case LanguageConceptSwitch.CustomDataType:
+        if (props_CustomDataType == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("CustomDataType");
+          props_CustomDataType = cpb.create();
+        }
+        return props_CustomDataType;
+      case LanguageConceptSwitch.Customer:
+        if (props_Customer == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Customer = cpb.create();
+        }
+        return props_Customer;
       case LanguageConceptSwitch.Discount:
         if (props_Discount == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -97,6 +114,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_LineItem = cpb.create();
         }
         return props_LineItem;
+      case LanguageConceptSwitch.Location:
+        if (props_Location == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("location");
+          props_Location = cpb.create();
+        }
+        return props_Location;
       case LanguageConceptSwitch.Street:
         if (props_Street == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

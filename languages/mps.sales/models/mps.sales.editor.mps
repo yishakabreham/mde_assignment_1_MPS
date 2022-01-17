@@ -34,7 +34,12 @@
       <concept id="1186414536763" name="jetbrains.mps.lang.editor.structure.BooleanStyleSheetItem" flags="ln" index="VOi$J">
         <property id="1186414551515" name="flag" index="VOm3f" />
       </concept>
+      <concept id="1088013125922" name="jetbrains.mps.lang.editor.structure.CellModel_RefCell" flags="sg" stub="730538219795941030" index="1iCGBv">
+        <child id="1088186146602" name="editorComponent" index="1sWHZn" />
+      </concept>
+      <concept id="1088185857835" name="jetbrains.mps.lang.editor.structure.InlineEditorComponent" flags="ig" index="1sVBvm" />
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
+        <property id="1140017977771" name="readOnly" index="1Intyy" />
         <reference id="1140103550593" name="relationDeclaration" index="1NtTu8" />
       </concept>
       <concept id="1073389446423" name="jetbrains.mps.lang.editor.structure.CellModel_Collection" flags="sn" stub="3013115976261988961" index="3EZMnI">
@@ -227,7 +232,7 @@
         <property role="3F0ifm" value="Address" />
       </node>
       <node concept="3F2HdR" id="7j6tK10Z7iQ" role="3EZMnx">
-        <ref role="1NtTu8" to="um1j:7j6tK10YXsF" resolve="address" />
+        <ref role="1NtTu8" to="um1j:jLHKxfAbMO" resolve="address" />
         <node concept="l2Vlx" id="7j6tK10Z7iS" role="2czzBx" />
         <node concept="pj6Ft" id="7j6tK10Z7jc" role="3F10Kt">
           <property role="VOm3f" value="true" />
@@ -239,8 +244,27 @@
           <property role="VOm3f" value="true" />
         </node>
       </node>
+      <node concept="3F0ifn" id="1nnFD5eQT03" role="3EZMnx">
+        <property role="3F0ifm" value="Customers" />
+      </node>
+      <node concept="3F2HdR" id="1nnFD5eQYYX" role="3EZMnx">
+        <ref role="1NtTu8" to="um1j:1nnFD5eQz6C" resolve="customers" />
+        <node concept="l2Vlx" id="1nnFD5eQYYZ" role="2czzBx" />
+        <node concept="pVoyu" id="1nnFD5eQZ44" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="1nnFD5eQZ46" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="pj6Ft" id="1nnFD5eRiOC" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
       <node concept="3F0ifn" id="5YGhkKKy5V3" role="3EZMnx">
         <property role="3F0ifm" value="Transactions " />
+        <node concept="pVoyu" id="1nnFD5eQzNy" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="3F2HdR" id="7j6tK10Z7j3" role="3EZMnx">
         <ref role="1NtTu8" to="um1j:7j6tK10Z36M" resolve="transactions" />
@@ -307,6 +331,92 @@
         <ref role="1NtTu8" to="um1j:5YGhkKKycri" resolve="value" />
       </node>
       <node concept="l2Vlx" id="5YGhkKKycrB" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="1nnFD5eRo0U">
+    <property role="3GE5qa" value="Core" />
+    <ref role="1XX52x" to="um1j:7j6tK10YWnw" resolve="CashSales" />
+    <node concept="3EZMnI" id="1nnFD5eRojJ" role="2wV5jI">
+      <node concept="3F0ifn" id="1nnFD5eRPER" role="3EZMnx">
+        <property role="3F0ifm" value="Transaction Number: " />
+      </node>
+      <node concept="3F0A7n" id="1nnFD5eRPFp" role="3EZMnx">
+        <ref role="1NtTu8" to="um1j:7j6tK10Z2qk" resolve="transactionNumber" />
+      </node>
+      <node concept="3F0ifn" id="1nnFD5eRPHw" role="3EZMnx">
+        <property role="3F0ifm" value="Date: " />
+        <node concept="pVoyu" id="1nnFD5eRPJh" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="1nnFD5eRPI8" role="3EZMnx">
+        <ref role="1NtTu8" to="um1j:7j6tK10Z35U" resolve="date" />
+      </node>
+      <node concept="3F0ifn" id="1nnFD5eRokT" role="3EZMnx">
+        <property role="3F0ifm" value="Transaction type:" />
+        <node concept="pVoyu" id="1nnFD5eRPFF" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="1nnFD5eRol3" role="3EZMnx">
+        <ref role="1NtTu8" to="um1j:7j6tK10YWnx" resolve="type" />
+      </node>
+      <node concept="l2Vlx" id="1nnFD5eRojM" role="2iSdaV" />
+      <node concept="3F0ifn" id="1nnFD5eRolg" role="3EZMnx">
+        <property role="3F0ifm" value="Customer: " />
+        <node concept="pVoyu" id="1nnFD5eRolB" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="1iCGBv" id="1nnFD5eSWzq" role="3EZMnx">
+        <ref role="1NtTu8" to="um1j:1nnFD5eSWxN" resolve="customer" />
+        <node concept="1sVBvm" id="1nnFD5eSWzs" role="1sWHZn">
+          <node concept="3F0A7n" id="1nnFD5eSWzV" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="1nnFD5eRPK0" role="3EZMnx">
+        <property role="3F0ifm" value="Payment Method: " />
+        <node concept="pVoyu" id="1nnFD5eRPLu" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="1nnFD5eRPL6" role="3EZMnx">
+        <ref role="1NtTu8" to="um1j:7j6tK10Z36e" resolve="paymentMethod" />
+      </node>
+      <node concept="3F0ifn" id="1nnFD5eRPMj" role="3EZMnx">
+        <property role="3F0ifm" value="Grand Total: " />
+        <node concept="pVoyu" id="1nnFD5eRPNy" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="1nnFD5eRPN7" role="3EZMnx">
+        <ref role="1NtTu8" to="um1j:4o1aEA8uLkE" resolve="grandTotal" />
+        <node concept="ljvvj" id="1nnFD5eRPN$" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="1nnFD5eRFgB" role="3EZMnx">
+        <property role="3F0ifm" value="LineItems" />
+        <node concept="pVoyu" id="1nnFD5eRFh8" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F2HdR" id="1nnFD5eRFgV" role="3EZMnx">
+        <ref role="1NtTu8" to="um1j:7j6tK10Z05K" resolve="lineItem" />
+        <node concept="l2Vlx" id="1nnFD5eRFgX" role="2czzBx" />
+        <node concept="pVoyu" id="1nnFD5eRFha" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="1nnFD5eRFhc" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="pj6Ft" id="1nnFD5eRFhf" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
     </node>
   </node>
 </model>

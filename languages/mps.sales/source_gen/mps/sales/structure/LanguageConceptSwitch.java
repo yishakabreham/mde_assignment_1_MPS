@@ -16,12 +16,15 @@ public final class LanguageConceptSwitch {
   public static final int Company = 4;
   public static final int Country = 5;
   public static final int CreditSales = 6;
-  public static final int Discount = 7;
-  public static final int Item = 8;
-  public static final int LineItem = 9;
-  public static final int Street = 10;
-  public static final int Telephone = 11;
-  public static final int Transaction = 12;
+  public static final int CustomDataType = 7;
+  public static final int Customer = 8;
+  public static final int Discount = 9;
+  public static final int Item = 10;
+  public static final int LineItem = 11;
+  public static final int Location = 12;
+  public static final int Street = 13;
+  public static final int Telephone = 14;
+  public static final int Transaction = 15;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L);
@@ -32,9 +35,12 @@ public final class LanguageConceptSwitch {
     builder.put(0x74c6770040fbc5dcL, Company);
     builder.put(0x5fac454c3088c6afL, Country);
     builder.put(0x74c6770040fbc5e3L, CreditSales);
+    builder.put(0x15d7ae914edeb406L, CustomDataType);
+    builder.put(0x4f1b7084f993550L, Customer);
     builder.put(0x74c6770040fc319cL, Discount);
     builder.put(0x74c6770040fc12a0L, Item);
     builder.put(0x74c6770040fc016dL, LineItem);
+    builder.put(0x4f1b7084f992afaL, Location);
     builder.put(0x74c6770040fc31acL, Street);
     builder.put(0x74c6770040fc31afL, Telephone);
     builder.put(0x74c6770040fbc5dfL, Transaction);

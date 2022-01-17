@@ -65,12 +65,19 @@
     <node concept="PrWs8" id="7j6tK10YWnt" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
-    <node concept="1TJgyj" id="7j6tK10YXsF" role="1TKVEi">
-      <property role="IQ2ns" value="8414543796762302251" />
+    <node concept="1TJgyj" id="jLHKxfAbMO" role="1TKVEi">
+      <property role="IQ2ns" value="356267091862011060" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="address" />
       <property role="20lbJX" value="fLJekj6/_1__n" />
       <ref role="20lvS9" node="7j6tK10Z36D" resolve="Address" />
+    </node>
+    <node concept="1TJgyj" id="1nnFD5eQz6C" role="1TKVEi">
+      <property role="IQ2ns" value="1573918533905691048" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="customers" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="jLHKxfAjlg" resolve="Customer" />
     </node>
     <node concept="1TJgyj" id="7j6tK10Z36M" role="1TKVEi">
       <property role="IQ2ns" value="8414543796762325426" />
@@ -104,7 +111,7 @@
     <node concept="1TJgyi" id="7j6tK10Z35U" role="1TKVEl">
       <property role="IQ2nx" value="8414543796762325370" />
       <property role="TrG5h" value="date" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+      <ref role="AX2Wp" node="1nnFD5eRFg8" resolve="DataType" />
     </node>
     <node concept="1TJgyi" id="7j6tK10Z36e" role="1TKVEl">
       <property role="IQ2nx" value="8414543796762325390" />
@@ -115,6 +122,11 @@
       <property role="IQ2nx" value="5044359965259273514" />
       <property role="TrG5h" value="grandTotal" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyj" id="1nnFD5eSWxN" role="1TKVEi">
+      <property role="IQ2ns" value="1573918533906319475" />
+      <property role="20kJfa" value="customer" />
+      <ref role="20lvS9" node="jLHKxfAjlg" resolve="Customer" />
     </node>
   </node>
   <node concept="1TIwiD" id="7j6tK10YWnw">
@@ -328,6 +340,72 @@
       <property role="3tVfz5" value="5044359965259562277" />
       <property role="TrG5h" value="CreditSales" />
       <property role="1L1pqM" value="CREDIT SALES" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="jLHKxfAiFU">
+    <property role="EcuMT" value="356267091862039290" />
+    <property role="TrG5h" value="Location" />
+    <property role="34LRSv" value="location" />
+    <property role="3GE5qa" value="Location" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyi" id="jLHKxfAiFV" role="1TKVEl">
+      <property role="IQ2nx" value="356267091862039291" />
+      <property role="TrG5h" value="latitude" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="jLHKxfAiFX" role="1TKVEl">
+      <property role="IQ2nx" value="356267091862039293" />
+      <property role="TrG5h" value="longitude" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="jLHKxfAjlg">
+    <property role="EcuMT" value="356267091862041936" />
+    <property role="TrG5h" value="Customer" />
+    <property role="3GE5qa" value="Customer" />
+    <property role="34LRSv" value="customer" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="PrWs8" id="jLHKxfAjlh" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyi" id="1nnFD5eRE2E" role="1TKVEl">
+      <property role="IQ2nx" value="1573918533905981610" />
+      <property role="TrG5h" value="uniqueID" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="jLHKxfAjlj" role="1TKVEl">
+      <property role="IQ2nx" value="356267091862041939" />
+      <property role="TrG5h" value="phoneNumber" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1nnFD5eRFg6">
+    <property role="EcuMT" value="1573918533905986566" />
+    <property role="TrG5h" value="CustomDataType" />
+    <property role="3GE5qa" value="Custom" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyi" id="1nnFD5eRFgf" role="1TKVEl">
+      <property role="IQ2nx" value="1573918533905986575" />
+      <property role="TrG5h" value="dataType" />
+      <ref role="AX2Wp" node="1nnFD5eRFg8" resolve="DataType" />
+    </node>
+    <node concept="1TJgyi" id="1nnFD5eRFgh" role="1TKVEl">
+      <property role="IQ2nx" value="1573918533905986577" />
+      <property role="TrG5h" value="length" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="25R3W" id="1nnFD5eRFg8">
+    <property role="3F6X1D" value="1573918533905986568" />
+    <property role="3GE5qa" value="Type" />
+    <property role="TrG5h" value="DataType" />
+    <node concept="25R33" id="1nnFD5eRFg9" role="25R1y">
+      <property role="3tVfz5" value="1573918533905986569" />
+      <property role="TrG5h" value="VARCHAR" />
+    </node>
+    <node concept="25R33" id="1nnFD5eRFga" role="25R1y">
+      <property role="3tVfz5" value="1573918533905986570" />
+      <property role="TrG5h" value="DATE" />
     </node>
   </node>
 </model>

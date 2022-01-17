@@ -20,6 +20,16 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.ConceptPresentationAspectBase" />
   </dependency>
+  <dependency className="mps.sales.structure.EnumerationDescriptor_DataType">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.EnumerationLiteralsIndex" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.EnumerationDescriptor" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.EnumerationDescriptorBase" />
+  </dependency>
   <dependency className="mps.sales.structure.EnumerationDescriptor_PaymentMethod">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
@@ -58,6 +68,7 @@
     <classNode dependClassName="jetbrains.mps.smodel.runtime.EnumerationDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.StructureAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2" />
+    <classNode dependClassName="mps.sales.structure.EnumerationDescriptor_DataType" />
     <classNode dependClassName="mps.sales.structure.EnumerationDescriptor_PaymentMethod" />
     <classNode dependClassName="mps.sales.structure.EnumerationDescriptor_TransactionType" />
     <classNode dependClassName="mps.sales.structure.LanguageConceptSwitch" />
