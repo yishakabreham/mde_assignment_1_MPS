@@ -7,8 +7,8 @@ import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.openapi.editor.EditorContext;
 import org.jetbrains.mps.openapi.model.SNode;
 
-public class Street_Editor extends DefaultNodeEditor {
+public class Address_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-    return new Street_EditorBuilder_a(editorContext, node).createCell();
+    return new Address_EditorBuilder_a(editorContext, node).createCell();
   }
 }

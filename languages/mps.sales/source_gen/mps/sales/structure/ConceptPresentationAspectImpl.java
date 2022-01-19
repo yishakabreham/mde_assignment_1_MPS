@@ -12,9 +12,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_AdditionalCharge;
   private ConceptPresentation props_Address;
   private ConceptPresentation props_CashSales;
-  private ConceptPresentation props_City;
   private ConceptPresentation props_Company;
-  private ConceptPresentation props_Country;
   private ConceptPresentation props_CreditSales;
   private ConceptPresentation props_CustomDataType;
   private ConceptPresentation props_Customer;
@@ -22,8 +20,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Item;
   private ConceptPresentation props_LineItem;
   private ConceptPresentation props_Location;
-  private ConceptPresentation props_Street;
-  private ConceptPresentation props_Telephone;
   private ConceptPresentation props_Transaction;
 
   @Override
@@ -41,6 +37,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Address:
         if (props_Address == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("merchant address");
           props_Address = cpb.create();
         }
         return props_Address;
@@ -51,13 +48,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_CashSales = cpb.create();
         }
         return props_CashSales;
-      case LanguageConceptSwitch.City:
-        if (props_City == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("city");
-          props_City = cpb.create();
-        }
-        return props_City;
       case LanguageConceptSwitch.Company:
         if (props_Company == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -65,13 +55,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Company = cpb.create();
         }
         return props_Company;
-      case LanguageConceptSwitch.Country:
-        if (props_Country == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("country");
-          props_Country = cpb.create();
-        }
-        return props_Country;
       case LanguageConceptSwitch.CreditSales:
         if (props_CreditSales == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -121,20 +104,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Location = cpb.create();
         }
         return props_Location;
-      case LanguageConceptSwitch.Street:
-        if (props_Street == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("street");
-          props_Street = cpb.create();
-        }
-        return props_Street;
-      case LanguageConceptSwitch.Telephone:
-        if (props_Telephone == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("telephone");
-          props_Telephone = cpb.create();
-        }
-        return props_Telephone;
       case LanguageConceptSwitch.Transaction:
         if (props_Transaction == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

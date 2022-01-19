@@ -10,6 +10,9 @@ import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
 import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
+import jetbrains.mps.openapi.editor.style.Style;
+import jetbrains.mps.editor.runtime.style.StyleImpl;
+import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.openapi.editor.menus.transformation.SPropertyInfo;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Property;
@@ -23,9 +26,6 @@ import java.util.Objects;
 import jetbrains.mps.lang.core.behavior.PropertyAttribute__BehaviorDescriptor;
 import jetbrains.mps.nodeEditor.EditorManager;
 import jetbrains.mps.openapi.editor.update.AttributeKind;
-import jetbrains.mps.openapi.editor.style.Style;
-import jetbrains.mps.editor.runtime.style.StyleImpl;
-import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
 import jetbrains.mps.lang.editor.cellProviders.SReferenceCellProvider;
 import jetbrains.mps.util.Computable;
@@ -88,6 +88,9 @@ import org.jetbrains.mps.openapi.language.SConcept;
   private EditorCell createConstant_0() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Transaction Number: ");
     editorCell.setCellId("Constant_oc7k3t_a0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
+    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
@@ -117,7 +120,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
   }
   private EditorCell createConstant_1() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Date: ");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Transaction Type:");
     editorCell.setCellId("Constant_oc7k3t_c0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
@@ -128,11 +131,11 @@ import org.jetbrains.mps.openapi.language.SConcept;
   private EditorCell createProperty_1() {
     getCellFactory().pushCellContext();
     try {
-      final SProperty property = PROPS.date$uKgW;
+      final SProperty property = PROPS.type$$QBK;
       getCellFactory().setPropertyInfo(new SPropertyInfo(myNode, property));
       EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, false), myNode);
-      editorCell.setDefaultText("<no date>");
-      editorCell.setCellId("property_date");
+      editorCell.setDefaultText("<no type>");
+      editorCell.setCellId("property_type");
       editorCell.setSubstituteInfo(new SPropertySubstituteInfo(editorCell, property));
       setCellContext(editorCell);
       Iterable<SNode> propertyAttributes = SNodeOperations.ofConcept(new IAttributeDescriptor.AllAttributes().list(myNode), CONCEPTS.PropertyAttribute$Gb);
@@ -151,7 +154,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
   }
   private EditorCell createConstant_2() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Transaction type:");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Date: ");
     editorCell.setCellId("Constant_oc7k3t_e0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
@@ -162,11 +165,11 @@ import org.jetbrains.mps.openapi.language.SConcept;
   private EditorCell createProperty_2() {
     getCellFactory().pushCellContext();
     try {
-      final SProperty property = PROPS.type$$QBK;
+      final SProperty property = PROPS.date$uKgW;
       getCellFactory().setPropertyInfo(new SPropertyInfo(myNode, property));
       EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, false), myNode);
-      editorCell.setDefaultText("<no type>");
-      editorCell.setCellId("property_type");
+      editorCell.setDefaultText("<no date>");
+      editorCell.setCellId("property_date");
       editorCell.setSubstituteInfo(new SPropertySubstituteInfo(editorCell, property));
       setCellContext(editorCell);
       Iterable<SNode> propertyAttributes = SNodeOperations.ofConcept(new IAttributeDescriptor.AllAttributes().list(myNode), CONCEPTS.PropertyAttribute$Gb);
@@ -327,9 +330,6 @@ import org.jetbrains.mps.openapi.language.SConcept;
       EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, false), myNode);
       editorCell.setDefaultText("<no grandTotal>");
       editorCell.setCellId("property_grandTotal");
-      Style style = new StyleImpl();
-      style.set(StyleAttributes.INDENT_LAYOUT_NEW_LINE, true);
-      editorCell.getStyle().putAll(style);
       editorCell.setSubstituteInfo(new SPropertySubstituteInfo(editorCell, property));
       setCellContext(editorCell);
       Iterable<SNode> propertyAttributes = SNodeOperations.ofConcept(new IAttributeDescriptor.AllAttributes().list(myNode), CONCEPTS.PropertyAttribute$Gb);
@@ -382,7 +382,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return myNode;
     }
     public SContainmentLink getSLink() {
-      return LINKS.lineItem$dzr;
+      return LINKS.lineItem$Ae1B;
     }
     public SAbstractConcept getChildSConcept() {
       return CONCEPTS.LineItem$FZ;
@@ -395,7 +395,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(lineItemListHandler_oc7k3t_n0.this.getNode(), LINKS.lineItem$dzr));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(lineItemListHandler_oc7k3t_n0.this.getNode(), LINKS.lineItem$Ae1B));
       try {
         EditorCell emptyCell = null;
         emptyCell = super.createEmptyCell();
@@ -438,8 +438,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
   private static final class PROPS {
     /*package*/ static final SProperty transactionNumber$uhR0 = MetaAdapterFactory.getProperty(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fbc5dfL, 0x74c6770040fc2694L, "transactionNumber");
-    /*package*/ static final SProperty date$uKgW = MetaAdapterFactory.getProperty(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fbc5dfL, 0x74c6770040fc317aL, "date");
     /*package*/ static final SProperty type$$QBK = MetaAdapterFactory.getProperty(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fbc5e0L, 0x74c6770040fbc5e1L, "type");
+    /*package*/ static final SProperty date$uKgW = MetaAdapterFactory.getProperty(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fbc5dfL, 0x74c6770040fc317aL, "date");
     /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
     /*package*/ static final SProperty paymentMethod$uYNU = MetaAdapterFactory.getProperty(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fbc5dfL, 0x74c6770040fc318eL, "paymentMethod");
     /*package*/ static final SProperty grandTotal$tP5m = MetaAdapterFactory.getProperty(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fbc5dfL, 0x46012aa9887b152aL, "grandTotal");
@@ -453,6 +453,6 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
   private static final class LINKS {
     /*package*/ static final SReferenceLink customer$Oa0j = MetaAdapterFactory.getReferenceLink(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fbc5dfL, 0x15d7ae914ee3c873L, "customer");
-    /*package*/ static final SContainmentLink lineItem$dzr = MetaAdapterFactory.getContainmentLink(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fbc5e0L, 0x74c6770040fc0170L, "lineItem");
+    /*package*/ static final SContainmentLink lineItem$Ae1B = MetaAdapterFactory.getContainmentLink(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fbc5dfL, 0x76e5265995c3fe90L, "lineItem");
   }
 }

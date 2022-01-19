@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="8zte5rn8vslwzlamzvuy6v805rkx1t5">
-  <files names="CashSales_Editor.java:CashSales_EditorBuilder_a.java:City_Editor.java:City_EditorBuilder_a.java:Company_Editor.java:Company_EditorBuilder_a.java:Country_Editor.java:Country_EditorBuilder_a.java:EditorAspectDescriptorImpl.java:Street_Editor.java:Street_EditorBuilder_a.java:Telephone_Editor.java:Telephone_EditorBuilder_a.java" />
+<product version="3" modelHash="c8jbc0cctoueefslxxrlc3xtqh9wt8o">
+  <files names="Address_Editor.java:Address_EditorBuilder_a.java:CashSales_Editor.java:CashSales_EditorBuilder_a.java:Company_Editor.java:Company_EditorBuilder_a.java:EditorAspectDescriptorImpl.java" />
 </product>
 

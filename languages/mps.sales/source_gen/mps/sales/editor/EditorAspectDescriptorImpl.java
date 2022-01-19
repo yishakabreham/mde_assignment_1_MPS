@@ -18,17 +18,11 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
     SAbstractConcept cncpt = ((SAbstractConcept) concept);
     switch (conceptIndex.index(cncpt)) {
       case 0:
-        return Collections.<ConceptEditor>singletonList(new CashSales_Editor());
+        return Collections.<ConceptEditor>singletonList(new Address_Editor());
       case 1:
-        return Collections.<ConceptEditor>singletonList(new City_Editor());
+        return Collections.<ConceptEditor>singletonList(new CashSales_Editor());
       case 2:
         return Collections.<ConceptEditor>singletonList(new Company_Editor());
-      case 3:
-        return Collections.<ConceptEditor>singletonList(new Country_Editor());
-      case 4:
-        return Collections.<ConceptEditor>singletonList(new Street_Editor());
-      case 5:
-        return Collections.<ConceptEditor>singletonList(new Telephone_Editor());
       default:
     }
     return Collections.<ConceptEditor>emptyList();
@@ -36,5 +30,5 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
 
 
 
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fbc5e0L), MetaIdFactory.conceptId(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x5fac454c3088c6aeL), MetaIdFactory.conceptId(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fbc5dcL), MetaIdFactory.conceptId(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x5fac454c3088c6afL), MetaIdFactory.conceptId(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fc31acL), MetaIdFactory.conceptId(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fc31afL)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fc31a9L), MetaIdFactory.conceptId(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fbc5e0L), MetaIdFactory.conceptId(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fbc5dcL)).seal();
 }

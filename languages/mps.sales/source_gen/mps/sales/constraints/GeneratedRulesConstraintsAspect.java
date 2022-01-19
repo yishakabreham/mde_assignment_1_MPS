@@ -18,10 +18,10 @@ public final class GeneratedRulesConstraintsAspect implements RulesConstraintsAs
     SAbstractConcept cncpt = concept;
     switch (conceptIndex.index(cncpt)) {
       case 0:
-        return new Transaction_ConstraintRules();
+        return new Company_ConstraintRules();
       default:
     }
     return null;
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fbc5dfL)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fbc5dcL)).seal();
 }

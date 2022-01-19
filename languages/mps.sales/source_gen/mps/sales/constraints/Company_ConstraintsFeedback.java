@@ -16,20 +16,20 @@ import java.util.Collections;
 import java.util.Arrays;
 import java.util.stream.Stream;
 
-public final class Transaction_ConstraintsFeedback extends BaseFeedbackDescriptor {
-  private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fbc5dfL, "mps.sales.structure.Transaction");
+public final class Company_ConstraintsFeedback extends BaseFeedbackDescriptor {
+  private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xd2c82ff21fca47a9L, 0x9cebb491a324c870L, 0x74c6770040fbc5dcL, "mps.sales.structure.Company");
 
-  private static final FeedbackProvider<ContainmentContext> MSGPROVIDER_WhenConstraintRuleFails_all6ql_a = new BaseMessageProvider<ContainmentContext>(new FailingRuleProblemId(Transaction_ConstraintRules.Rule_NumberOfChars.ID_NumberOfChars)) {
+  private static final FeedbackProvider<ContainmentContext> MSGPROVIDER_WhenConstraintRuleFails_a514z0_a = new BaseMessageProvider<ContainmentContext>(new FailingRuleProblemId(Company_ConstraintRules.Rule_COUNTRULE_UP.ID_COUNTRULE_UP)) {
     @NotNull
     @Override
     public MessageProvider.Msg yieldMessage(ContainmentContext context) {
-      return new MessageProvider.StringMsg("Information: Transaction Number can not be more that 12 characters!");
+      return new MessageProvider.StringMsg("" + "INFO: The number of characters of this field cannot be morethan 13!" + "" + " " + "");
     }
   };
 
-  private static final List<FeedbackProvider> PROVIDERS = Collections.unmodifiableList(Arrays.<FeedbackProvider>asList(MSGPROVIDER_WhenConstraintRuleFails_all6ql_a));
+  private static final List<FeedbackProvider> PROVIDERS = Collections.unmodifiableList(Arrays.<FeedbackProvider>asList(MSGPROVIDER_WhenConstraintRuleFails_a514z0_a));
 
-  public Transaction_ConstraintsFeedback() {
+  public Company_ConstraintsFeedback() {
     super(CONCEPT);
   }
 

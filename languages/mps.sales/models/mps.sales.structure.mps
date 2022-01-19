@@ -69,7 +69,7 @@
       <property role="IQ2ns" value="356267091862011060" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="address" />
-      <property role="20lbJX" value="fLJekj6/_1__n" />
+      <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="7j6tK10Z36D" resolve="Address" />
     </node>
     <node concept="1TJgyj" id="1nnFD5eQz6C" role="1TKVEi">
@@ -103,11 +103,6 @@
       <property role="TrG5h" value="transactionNumber" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
-    <node concept="1TJgyi" id="7j6tK10Z35R" role="1TKVEl">
-      <property role="IQ2nx" value="8414543796762325367" />
-      <property role="TrG5h" value="customer" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
-    </node>
     <node concept="1TJgyi" id="7j6tK10Z35U" role="1TKVEl">
       <property role="IQ2nx" value="8414543796762325370" />
       <property role="TrG5h" value="date" />
@@ -128,6 +123,13 @@
       <property role="20kJfa" value="customer" />
       <ref role="20lvS9" node="jLHKxfAjlg" resolve="Customer" />
     </node>
+    <node concept="1TJgyj" id="7r_9_AlKZUg" role="1TKVEi">
+      <property role="IQ2ns" value="8567296032348831376" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="lineItem" />
+      <property role="20lbJX" value="fLJekj6/_1__n" />
+      <ref role="20lvS9" node="7j6tK10Z05H" resolve="LineItem" />
+    </node>
   </node>
   <node concept="1TIwiD" id="7j6tK10YWnw">
     <property role="EcuMT" value="8414543796762297824" />
@@ -140,13 +142,6 @@
       <property role="TrG5h" value="type" />
       <ref role="AX2Wp" node="4o1aEA8vROz" resolve="TransactionType" />
     </node>
-    <node concept="1TJgyj" id="7j6tK10Z05K" role="1TKVEi">
-      <property role="IQ2ns" value="8414543796762313072" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="lineItem" />
-      <property role="20lbJX" value="fLJekj6/_1__n" />
-      <ref role="20lvS9" node="7j6tK10Z05H" resolve="LineItem" />
-    </node>
   </node>
   <node concept="1TIwiD" id="7j6tK10YWnz">
     <property role="EcuMT" value="8414543796762297827" />
@@ -157,6 +152,21 @@
     <node concept="1TJgyi" id="7j6tK10YWn$" role="1TKVEl">
       <property role="IQ2nx" value="8414543796762297828" />
       <property role="TrG5h" value="type" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="7r_9_AlLEGZ" role="1TKVEl">
+      <property role="IQ2nx" value="8567296032349006655" />
+      <property role="TrG5h" value="cardHolder" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="7r_9_AlLEH2" role="1TKVEl">
+      <property role="IQ2nx" value="8567296032349006658" />
+      <property role="TrG5h" value="cardNumber" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="7r_9_AlLEH6" role="1TKVEl">
+      <property role="IQ2nx" value="8567296032349006662" />
+      <property role="TrG5h" value="expiryDate" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>
@@ -171,12 +181,6 @@
       <property role="20kJfa" value="item" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="7j6tK10Z1aw" resolve="Item" />
-    </node>
-    <node concept="1TJgyj" id="7j6tK10Z36v" role="1TKVEi">
-      <property role="IQ2ns" value="8414543796762325407" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="discount" />
-      <ref role="20lvS9" node="7j6tK10Z36s" resolve="Discount" />
     </node>
     <node concept="1TJgyj" id="7j6tK10Z36_" role="1TKVEi">
       <property role="IQ2ns" value="8414543796762325413" />
@@ -249,17 +253,6 @@
       <property role="1L1pqM" value="CREDIT" />
     </node>
   </node>
-  <node concept="1TIwiD" id="7j6tK10Z36s">
-    <property role="EcuMT" value="8414543796762325404" />
-    <property role="TrG5h" value="Discount" />
-    <property role="3GE5qa" value="Additional Charges" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
-    <node concept="1TJgyi" id="7j6tK10Z36t" role="1TKVEl">
-      <property role="IQ2nx" value="8414543796762325405" />
-      <property role="TrG5h" value="amount" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="7j6tK10Z36y">
     <property role="EcuMT" value="8414543796762325410" />
     <property role="TrG5h" value="AdditionalCharge" />
@@ -267,63 +260,44 @@
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
     <node concept="1TJgyi" id="7j6tK10Z36z" role="1TKVEl">
       <property role="IQ2nx" value="8414543796762325411" />
-      <property role="TrG5h" value="amount" />
+      <property role="TrG5h" value="discount" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="4SFPNdYoG1p" role="1TKVEl">
+      <property role="IQ2nx" value="5632832375120642137" />
+      <property role="TrG5h" value="serviceCharge" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="4SFPNdYoG1u" role="1TKVEl">
+      <property role="IQ2nx" value="5632832375120642142" />
+      <property role="TrG5h" value="vat" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>
   <node concept="1TIwiD" id="7j6tK10Z36D">
     <property role="EcuMT" value="8414543796762325417" />
     <property role="TrG5h" value="Address" />
-    <property role="R5$K7" value="true" />
     <property role="3GE5qa" value="Address" />
     <property role="34LRSv" value="merchant address" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
-  </node>
-  <node concept="1TIwiD" id="7j6tK10Z36G">
-    <property role="EcuMT" value="8414543796762325420" />
-    <property role="TrG5h" value="Street" />
-    <property role="34LRSv" value="street" />
-    <property role="3GE5qa" value="Address" />
-    <ref role="1TJDcQ" node="7j6tK10Z36D" resolve="Address" />
-    <node concept="1TJgyi" id="7j6tK10Z36H" role="1TKVEl">
-      <property role="IQ2nx" value="8414543796762325421" />
-      <property role="TrG5h" value="value" />
+    <node concept="1TJgyi" id="4SFPNdYodRd" role="1TKVEl">
+      <property role="IQ2nx" value="5632832375120518605" />
+      <property role="TrG5h" value="street" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
-  </node>
-  <node concept="1TIwiD" id="7j6tK10Z36J">
-    <property role="EcuMT" value="8414543796762325423" />
-    <property role="TrG5h" value="Telephone" />
-    <property role="34LRSv" value="telephone" />
-    <property role="3GE5qa" value="Address" />
-    <ref role="1TJDcQ" node="7j6tK10Z36D" resolve="Address" />
-    <node concept="1TJgyi" id="7j6tK10Z36K" role="1TKVEl">
-      <property role="IQ2nx" value="8414543796762325424" />
-      <property role="TrG5h" value="value" />
+    <node concept="1TJgyi" id="4SFPNdYnoQD" role="1TKVEl">
+      <property role="IQ2nx" value="5632832375120301481" />
+      <property role="TrG5h" value="city" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
-  </node>
-  <node concept="1TIwiD" id="5YGhkKKycqI">
-    <property role="EcuMT" value="6893961323131487918" />
-    <property role="3GE5qa" value="Address" />
-    <property role="TrG5h" value="City" />
-    <property role="34LRSv" value="city" />
-    <ref role="1TJDcQ" node="7j6tK10Z36D" resolve="Address" />
-    <node concept="1TJgyi" id="5YGhkKKycri" role="1TKVEl">
-      <property role="IQ2nx" value="6893961323131487954" />
-      <property role="TrG5h" value="value" />
+    <node concept="1TJgyi" id="4SFPNdYodRg" role="1TKVEl">
+      <property role="IQ2nx" value="5632832375120518608" />
+      <property role="TrG5h" value="country" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
-  </node>
-  <node concept="1TIwiD" id="5YGhkKKycqJ">
-    <property role="EcuMT" value="6893961323131487919" />
-    <property role="3GE5qa" value="Address" />
-    <property role="TrG5h" value="Country" />
-    <property role="34LRSv" value="country" />
-    <ref role="1TJDcQ" node="7j6tK10Z36D" resolve="Address" />
-    <node concept="1TJgyi" id="5YGhkKKycqK" role="1TKVEl">
-      <property role="IQ2nx" value="6893961323131487920" />
-      <property role="TrG5h" value="value" />
+    <node concept="1TJgyi" id="4SFPNdYodRk" role="1TKVEl">
+      <property role="IQ2nx" value="5632832375120518612" />
+      <property role="TrG5h" value="telephone" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>
@@ -370,7 +344,7 @@
     </node>
     <node concept="1TJgyi" id="1nnFD5eRE2E" role="1TKVEl">
       <property role="IQ2nx" value="1573918533905981610" />
-      <property role="TrG5h" value="uniqueID" />
+      <property role="TrG5h" value="identityNumber" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
     <node concept="1TJgyi" id="jLHKxfAjlj" role="1TKVEl">
